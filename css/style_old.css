@@ -1,0 +1,270 @@
+.navmain2 {
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    padding-top: 50px;
+    top:0
+}
+
+
+.logomain_item2{
+    width: 120px;
+    height: 30px;
+}
+
+
+.welcome_notice {
+    display: none;
+}
+
+
+.navitem_main2 {
+    font-family: circularM;
+    color: #fffaf2;
+    font-size: 20px;
+    position: relative;
+    display: inline;
+    padding-left: 30px;
+}
+
+.logoMain2 {
+    position: relative;
+    text-align: left;
+    padding-left: 50px;
+    height: 40px;
+    display: inline-block;
+    width: 55%;
+}
+
+.artcor_btn_landng2 {
+    height: 21px;
+    border-left: solid 2px white;
+    margin-left: 30px;
+    padding-top: 4px;
+}
+
+.body_main2 {
+    font-size: 115px;
+    font-family: circularM;
+    line-height: 70px;
+    color: white;
+    position: relative;
+    width: 910px;
+    z-index: 10;
+    margin-left: 100px;
+    font-weight: normal;
+    letter-spacing: 0px;
+    padding-top: 10px;
+}
+
+.body_main_container_2 {
+    position: relative;
+    margin-top: 15%;
+}
+
+.obsolete_browser_notice {
+    background: #1a75a0;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 35px;
+    font-family: monospace;
+    text-align: center;
+}
+
+.obsolete_browser_notice p {
+    margin: 0;
+    margin-top: 10px;
+}
+
+.footer2 {
+    height: 40px;
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 30px;
+    background: #122524;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+}
+
+
+.user_notice_mainL {
+    position: relative;
+    left: 100px;
+    margin-top: 55px;
+    width: 70%;
+}
+
+.check_para2 {
+    font-family: arial;
+    font-size: 20px;
+    margin: 0;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 0px;
+    width: 80%;
+    border-top: solid 1px #ff3a41;
+    padding-top: 15px;
+}
+
+.browsers_cont2 {
+    margin-top: 15px;
+    display: inline-block;
+    position: relative;
+    left: -30px;
+}
+
+.brws_item_title2 {
+    font-family: roboto;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    color: #ffffff;
+    /* left: -10px; */
+    position: relative;
+}
+.brws_item_logo2 {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+
+.brws_item2 {
+    display: grid;
+    grid-template-rows: 90% 10%;
+    float: left;
+    margin-left: 40px;
+    text-decoration:none;
+}
+
+
+
+
+
+
+
+/* Mobile Queries */
+@media screen and (max-width:600px) {
+    .obsolete_browser_notice p {
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 15px;
+    }
+
+    .obsolete_browser_notice{
+        height: 100px;
+        padding-top: 35px;
+        background: #1d1d1d;
+        color: #fcff21;
+        line-height: 20px;
+        width: 101%
+    }
+
+    /* .body_main_ {
+        background-size: 330%;
+        background-position-x: -86%;
+    } */
+
+
+    .welcome_notice {
+        display: block;
+    }
+
+    .footer2{
+        display: none
+    }
+
+    .body_main2{
+        display:none
+    }
+
+    .body_main_container_2{
+        position: fixed;
+        height: 100%;
+    }
+
+    .welcome_widget_landing_2 {
+        top: 50%;
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    h1.welcome_hdr_landing2 {
+        font-family: roboto;
+        font-weight: 500;
+        color: white;
+        font-size: 25px;
+        text-align: center;
+        margin: 0;
+        /* letter-spacing: 1px; */
+    }
+
+    .navitem_main2{
+        display: none
+    }
+
+    .user_notice_mainL{
+        display: none
+    }
+
+    .brws_item_logo2 {
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+    }
+
+
+    .brws_item2{
+        margin-left:20px
+    }
+
+
+    .browsers_cont2{
+        margin: 0 auto;
+        left: 7%;
+        margin-top: 5%;
+    }
+
+    .check_para2{
+        font-size: 15px;
+        font-family: roboto;
+        font-weight: 400;
+        text-align: center;
+        width: 90%;
+        border: none;
+        border-bottom: solid 1px #fc5d63;
+        margin: 0 auto;
+        padding-bottom: 15px;
+    }
+
+
+    img.logomain_item2{
+        width: 180px;
+        height: 50px;
+    }
+
+    .navmain2{
+        height: 50%;
+        width: 100%;
+        position: fixed;
+    }
+
+    .logoMain2{
+        padding-left: 0;
+        width: 100%;
+        text-align: center;
+        top: 40%;
+    }
+
+
+}
+
+
+
+

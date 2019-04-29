@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Application Stylesheets -->
+    <link rel="stylesheet" href="css/style_webapp.css">
+    <link rel="stylesheet" href="spinners/mk-spinners.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style_old.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/app.css" />
+
+
+    <!-- Preflight Scripts For Cordova Instantiate -->
+    <script src="assets/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="components/app.controller.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+
+   
+    <!-- CSS Fixes -->
+    <style>.spinnerContainer_{z-index: 10;}.mk-spinner-ring {z-index: 10;}</style>
+    
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progressB"><div class="dlprogress_slider"></div></div>
+    
+    
+    
+    <!-- App Root -->
+    <div class="App_Root">
+        
+        <!-- Top Gutter -->
+        <div class="logoGutter">
+            <span><img src="assets/icon/logo.png" data-name="home_logo" onclick="rte_(this)" class="gutterlogo" alt="strma_logo"></span>
+            <span><img src="assets/icons/menu.png" onclick="menu_mobile()" class="guttermenu" alt="strma_logo"></span>
+        </div>
+
+        <!-- mobile nav -->
+        <div class="mobilenav">
+            <span class="home_mbl nav_itm_mob navtab_active_" onclick="rte_(this)">
+                <svg id="Layer_1" class="menu_icn" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.83 87.13"><defs><style>.cls-1{fill:#fff;}</style></defs><title>home
+                </title><polygon class="cls-1" points="1.17 25.97 46.75 0 88.83 24.84 88.83 87.13 54.42 87.13 54.42 49.69 37.4 49.69 37.4 87.13 0 87.13 1.17 25.97"/></svg>
+                <span class="btn_title_mbl home_btn_mob">Home</span>
+            </span>
+            <span class="latest_mbl nav_itm_mob" onclick="rte_(this)">
+                <svg id="Layer_1" class="menu_icn" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.25 95"><defs><style>.cls-1,.cls-2{fill:none;stroke:#fff;stroke-miterlimit:10;}.cls-2{stroke-width:6px;}</style></defs><title>latest</title><ellipse class="cls-1" cx="48.12" cy="47.5" rx="44.62" ry="44"/>
+                <ellipse class="cls-2" cx="48.12" cy="47" rx="10.82" ry="10.71"/></svg>
+                <span class="btn_title_mbl search_btn_mob">Latest</span>
+            </span>
+            <span class="search_mbl nav_itm_mob" onclick="rte_(this)">
+                <svg class="menu_icn" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90.96 90.06"><defs><style>.cls-1{fill:none;stroke:#fff;stroke-miterlimit:10;}.cls-2{fill:#fff;}
+                </style></defs><title>search</title><ellipse class="cls-1" cx="38.91" cy="38.22" rx="36.41" ry="35.72"/><path class="cls-2" d="M577,992.45a27.87,27.87,0,0,0,7.12-6.75l17.25,15.78s-.49,6.71-6.69,7.52Z" transform="translate(-510.45 -918.94)"/></svg>
+                <span class="btn_title_mbl search_btn_mob">Search</span>
+            </span>
+            <span class="library_mbl nav_itm_mob" onclick="rte_(this)">
+                <svg id="Layer_1" class="menu_icn" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95.47 91.69"><defs><style>.cls-1{fill:none;stroke:#fff;stroke-miterlimit:10;}
+                </style></defs><title>library</title><path class="cls-1" d="M808.43,936.57s-10.88,13.74,9.52,36.87l25.15,30.36s6.12,8.68,12.24,3.62L888,966.93l4.08-5.78s7.47-14.46-1.36-26c0,0-6.12-10.12-17.68-11.57a27.26,27.26,0,0,0-18.35,6.51,6.11,6.11,0,0,1-7.48,0c-4.08-2.89-9.52-8-19-6.51S813.19,929.34,808.43,936.57Z" transform="translate(-802.53 -920.31)"/></svg>
+                <span class="btn_title_mbl library_btn_mob">Library</span>
+            </span>
+        </div>
+        
+        <!-- App body -->
+        <div class="app_body_"></div>
+        
+        <!-- audio player -->
+        <section><audio class="audioElement" src="null" ></audio></section>
+
+        <!-- Mobile Gutter -->
+        <div class="bottomGutter_mobile">
+            <div class="music_controls">
+                <div class="togglePlayer" onclick="_tgl_plyr_()">
+                    <img src="assets/icons/up.png" class="toggleIconplayer">
+                </div>
+                <div class="metaText">
+                        <div class="songName_meta">No Song Selected</div>
+                        <div class="artistName_meta">No Artist</div>
+                </div>
+                
+                <div class="media-controls">
+                    <img src="assets/icons/play.png" class="play playpause" onclick="cnls(this)" title="play">
+                    <img src="assets/icons/pause.png" class="pause playpause" onclick="cnls(this)" title="pause">
+                </div>
+            </div>
+            <div class="duration_barcontainer">
+                <div class="duration_bar" onclick="sk_()">
+                    <div class="duration_slider"></div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <!-- Load Scripts before App Launch -->
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+    <script src="lodash.js"></script>
+    <script src="cleve.js"></script>
+    <script src="components/view/store/store.js"></script>
+    <script src="components/view/home/home.js"></script>
+    <script src="components/view/landing/landing.js"></script>
+    <script src="components/view/landing/splashSVG.js"></script>
+    <script src="components/view/new_releases/release.js"></script>
+    <script src="components/view/popular/popular.js"></script>
+    <script src="components/view/router/router.js"></script>
+    <script src="components/view/search/search.js"></script>
+    <script src="components/view/pages/pages.js"></script>
+    <script src="components/view/queue/q.js"></script>
+    <script src="components/view/latest/latest.js"></script>
+    <script src="components/view/library/library.js"></script>
+    <script src="components/view/play.js"></script>
+    <script src="components/view/contextmenu.js"></script>
+    <script src="components/view/store/store.js"></script>
+    <script src="components/view/mobileSettings.js"></script>
+    <script src="components/backend/backend.js"></script>
+    <script src="components/view/nav.js"></script>
+    <script src="components/system/systemOperations.js"></script>
+    <!-- Load Preflight Settings Here ebfore rest of DOM Constructed -->
+    <script src="components/view/backend.js"></script>
+    
+</body>
+</html>
